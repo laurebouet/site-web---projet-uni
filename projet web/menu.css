@@ -1,0 +1,207 @@
+/* COMMUN A TOUTES LES PAGES */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    background-color:tomato;
+}
+/* bar de navigation */
+
+.nav{
+    padding: 3px 9px;
+    text-align:end;
+    text-decoration: none;
+    /*background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));*/
+}
+
+.nav i{
+    text-align:end;
+    text-decoration: none;
+    /*background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));*/
+}
+    /*menu principal*/
+.barnav .menu{
+    width: 15%;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: inline-block;
+    margin: 10px 20px;
+    align-items: center;
+    text-align: center;
+}
+.barnav .menu2{
+    width: 15%;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: inline-block;
+    margin: 10px 20px;
+    align-items: center;
+    text-align: center;
+}
+.barnav .menu {
+    text-decoration: none;
+    color: #fff;
+}
+.barnav .menu2 a{
+    text-decoration: none;
+    color: #fff;
+}
+/*menu déroulant  avec sous cat*/
+.nav  .barnav .sousmenu {
+    display:none; 
+    list-style: none;
+}
+
+/* fleche animée menu */
+
+@keyframes rotationfleche{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+/* bar navigation & fleche responsive = GRAND ECRAN */
+@media (min-width:850px){
+
+    /* fleche animée menu */
+
+    nav .barnav .menu::after{
+        padding: 3px;
+        content: '>';
+        color: #fff;
+        display: inline-block;
+    }
+    nav .barnav .menu:hover::after{
+        animation: rotationfleche 0.2s linear forwards;
+    }
+
+    /*menu déroulant  avec sous cat*/
+    
+    nav .menu .sousmenu li {
+        text-transform: uppercase;
+        margin: 10px 10px;
+        align-items: center;
+        text-align:center;
+    }
+    nav .menu .sousmenu li a{
+        color: #fff ; 
+    }
+    nav .barnav li:hover ul.sousmenu{
+        display:block;
+        font-size: small;
+        text-align: center;
+        align-items: center;
+        width: 15%;
+        /*background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));*/
+        position: absolute;
+    }
+
+}
+
+
+/*footer app icons */
+.iconapps{
+    text-align: center;
+    position: fixed;
+    color: #fff;
+    padding: 10px;
+    left:50%;
+    top: 96%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+}
+
+.iconapps i{
+    background-color: rgba(0,0,0, 0);
+}
+.iconapps a{
+    color: #fff;
+    background-color: rgba(0,0,0, 0);
+}
+.iconapps p{
+    color: #fff;
+    font-size: 8px;
+}
+.nav i{
+    display: none;
+}
+/* bar navigation & footer = responsive PETIT ECRAN */
+
+@media (max-width:850px){
+    .barnav li{
+        display:block;
+    }
+    .barnav{
+        position: absolute;
+        background-color: yellowgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    .nav i{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .barnav li{
+        padding: 15px ;
+    }
+    footer{
+        display: none;
+    }
+}
+
+
+/* UNIQUEMENT POUR LES PAGES DES MENUS */ 
+
+.titremenu{
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 30px;
+    margin-top: 6%;
+}
+.entree{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 10px;
+}
+.plat{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 10px;
+}
+.dessert{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.lemidi i{
+    font-size: 1rem;
+    color: #fff;
+    opacity: 50%;
+}
+.lesoir i{
+    font-size: 1rem;
+    color: #fff;
+    opacity: 50%;
+}
+.faitmaison{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
