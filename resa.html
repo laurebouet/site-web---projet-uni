@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>restaurant</title> <!--titre de page à trouver-->
+        <link rel="stylesheet" type="text/css" href="./test.css">
+        <!--font google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comme:wght@300&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        <!---->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <!---->
+        <!--icons-->
+        <script src="https://kit.fontawesome.com/83f99e36e2.js" crossorigin="anonymous"></script>
+        <!---->  
+        <!--javascript-->
+        <script src="./accueil.js"></script>
+        <!---->      
+        
+    </head>
+
+    <body>  
+        <header > 
+            <nav class="nav" >
+                <div id="barnav" class="barnav">
+                     <!-- <i class="fa-solid fa-xmark" id="closebtn" onclick="closemenu()"></i> -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./menu.html">Notre carte</a>
+                    <a href="./resa.html">R&eacute;servation</a>
+                    <a href="./avis.html">Avis</a>
+                    <a href="./message.html">Contact</a>
+                </div>
+                <span class="openbtn" onclick="openNav()">&#9776;</span>
+            </nav>
+            <div>
+                <a href="./formulaire.html"><p class="boutonresa">r&eacute;server</p></a>
+                <a href="./accueil.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
+            </div>
+
+        </header>
+    
+        <main>
+            <section id="cld">
+                <section id="entetecld">
+                    <h1 id="cldT"></h1>
+                    <section id="avantetapres">
+                        <button id="avant" class="cldBtn" onclick="CALENDRIER_DOWN() ; jourdumois() "> &lArr; </button>
+                        <button id="apres" class="cldBtn" onclick="CALENDRIER_UP() ; jourdumois()  " style="margin-left: 20%;"> &rArr;</button>                    
+                    </section>
+                </section>
+
+                <section id="cldBoite">
+
+                    <div id="semaine1" class="semaine">
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                    </div>
+
+                    <div id="semaine2" class="semaine">
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                    </div>
+
+                    <div id="semaine3" class="semaine">
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                    </div>
+
+                    <div id="semaine4" class="semaine">
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                        <div class="case" onclick="test(this)">*</div>
+                    </div>
+
+                    <div id="semaine5" class="semaine">
+                        <div class="case" onclick="test(this)"></div>
+                        <div class="case" onclick="test(this)"></div>
+                        <div class="case" onclick="test(this)"></div>
+                    </div>
+                </section>
+            </section>
+            <script src ="resa.js"></script>
+            <!-- <button class="titrecal" onclick="affichecal()">Date</button> -->
+
+            <script src ="./clickresa.js"></script>
+
+            <form  method="POST">
+                            
+                <fieldset>
+                    <div class="table">
+                        <div class="ligne1">
+                            <div class="tabgauche">
+                                <label for="nom">Nom </label>
+                            </div>
+                            <div class="tabgauche">
+                                <input name="nom" type="text" placeholder="Nom"><br><br>
+                            </div>
+                            <!-- <div class="tabdroite">
+                                <label for="date">Date </label>
+                            </div>
+                            <div class="tabd roite">
+                                <input name="date" type="date"><br><br>
+                            </div> -->
+                        </div>
+                        
+                        <div class="ligne2">
+                            <div class="tabgauche">
+                                <label for="num">T&eacute;l&eacute;phone </label>
+                            </div>
+                            <div class="tabgauche">
+                                <input name="num" type="tel" placeholder="Numéro"><br><br>
+                            </div>
+                            <div class="tabdroite">
+                                <label for="heure">Heure </label>
+                            </div>
+                            <div class="tabdroite">
+                                <select name="heure" >
+                                    <optgroup label="Heure">
+                                        <option>18:30</option>
+                                        <option>19:00</option>
+                                        <option>19:30</option>
+                                        <option selected>20:00</option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                    </optgroup>
+                                    
+                                </select><br><br>
+                            </div>
+                        </div>
+                        <div class="ligne3">
+                            <div  class="tabgauche">
+                                <label for="email">Email </label>
+                            </div>
+                            <div  class="tabgauche">
+                                <input name="email" type="email" placeholder="Email"><br><br>
+                            </div>
+                            <div class="tabdroite">
+                                <label for="nbpers">Invité(s) </label>
+                            </div>
+                            <div class="tabdroite">
+                                <input name="nbpers" type="number" placeholder="Invité(s)" min="0" max="8"><br><br>
+                            </div>
+                            <div class="tabdroite">
+                                <input type="submit" onclick="envoyer()" value="réserver">
+                            </div>
+                        </div>
+                   </div>                  
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>
+            <div class="fadresse">
+                <h4>Adresse</h4><br>
+                <p>Valrose Univerist&eacute;, <br>06 300 NICE FRANCE</p>
+            </div>
+            <div class="fhoraire">
+                <h4>Horaire</h4><br>
+                <ul>
+                    <li>La semaine 18:00</li>
+                    <li>Le weekend 12:00</li>
+                    <li>Fermé le mardi</li>
+                </ul>
+            </div>
+            <div class="iconapps">
+                <h4>Contact</h4><br>
+                <i class="fa-brands fa-instagram"></i>
+                <a href="./message.html" ><i class="fa-sharp fa-regular fa-envelope-open"></i></a>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="./message.html"><i class="fa-regular fa-comments"></i></a>
+                <p class="nom">Bouet Laure <br>Zennani Farid</p>
+            </div>
+        </footer>
+    </body>
+    
+</html>

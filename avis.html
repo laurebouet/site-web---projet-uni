@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>restaurant</title> <!--titre de page à trouver-->
+        <link rel="stylesheet" type="text/css" href="./avis.css">
+        <!--font google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comme:wght@300&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        <!---->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comme:wght@300&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        <!--icons-->
+        <script src="https://kit.fontawesome.com/83f99e36e2.js" crossorigin="anonymous"></script>
+        <!---->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--favicon-->
+        <link rel="icon" href="./images/favicon.ico" />
+        
+        <!---->
+    </head>
+
+    <body >  
+
+        <header id="img">
+            <script src="./accueil.js"></script>
+            
+            <nav class="nav" >
+                <div id="barnav" class="barnav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./menu.html">Notre carte</a>
+                    <a href="./resa.html">R&eacute;servation</a>
+                    <a href="./avis.html">Avis</a>
+                    <a href="./message.html">Contact</a>
+                </div>
+                <span class="openbtn" onclick="openNav()">&#9776;</span>
+            </nav>
+            
+            <div>
+                <a href="./resa.html"><p class="boutonresa">r&eacute;server</p></a>
+                <a href="./accueil.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
+                
+            </div>
+
+        </header>
+        
+        <main>
+            
+
+            <fieldset class="butavis">
+                <div class="avisclient">
+                    <h3>D&eacute;poser votre avis</h3>
+                    <p class="nom_com"></p>
+                </div>
+                <!-- <button>ajouter votre avis</button> -->
+                <form action="./avis.php" method="post">
+                    <input name="nom" placeholder="Nom"><br>
+                    <select name="formule" >
+                        <optgroup label="formule">
+                            <option>Formule du weekend</option>
+                            <option selected>Formule de la semaine</option>
+                            <option>&Eacute;venement personnel</option>
+                            <option>&Eacute;venement professionel</option>
+                        </optgroup>
+                        
+                    </select><br>
+                    <input name="nbpers" type="number" maxlength="2" placeholder="Nombre d'invité(s)" min="1">
+                    <textarea name="createcom" placeholder="Votre avis sur notre restaurant"></textarea><br>
+                    <input type="submit" name="envoyer" value="poster"><br>
+                </form>
+            </fieldset>
+            
+         
+        </main>
+        
+        
+        <footer>
+            <div class="fadresse">
+                <h4>Adresse</h4><br>
+                <p>Valrose Univerist&eacute;, <br>06 300 NICE FRANCE</p>
+            </div>
+            <div class="fhoraire">
+                <h4>Horaire</h4><br>
+                <ul>
+                    <li>La semaine 18:00</li>
+                    <li>Le weekend 12:00</li>
+                    <li>Fermé le mardi</li>
+                </ul>
+            </div>
+            <div class="iconapps">
+                <h4>Contact</h4><br>
+                <i class="fa-brands fa-instagram"></i>
+                <a href="./message.html" ><i class="fa-sharp fa-regular fa-envelope-open"></i></a>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="./message.html"><i class="fa-regular fa-comments"></i></a>
+                <p class="nom">Bouet Laure <br>Zennani Farid</p>
+            </div>
+        </footer>
+    </body>
+    
+</html>
